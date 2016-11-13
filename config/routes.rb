@@ -1,14 +1,4 @@
 Rails.application.routes.draw do
-  get 'user/index'
-
-  get 'user/new'
-
-  get 'user/show'
-
-  get 'user/update'
-
-  get 'user/destroy'
-
-  root 'application#index'
-  devise_for :users
+  root 'user#index'
+  devise_for :users, :controllers => { registrations: 'registrations' }
 end
